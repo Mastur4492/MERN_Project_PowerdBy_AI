@@ -1,0 +1,89 @@
+:root{
+	--max-width: 980px;
+	--bg: #0f172a;
+	--muted: #6b7280;
+}
+
+.app-root{ padding: 2rem 1rem; display:flex; justify-content:center; }
+.page-container{ width:100%; max-width:var(--max-width); }
+
+.app-header{ color: #fff; margin-bottom:1rem; }
+.header-inner{ display:flex; justify-content:space-between; align-items:center; gap:12px; padding-bottom:8px; }
+.site-title{ font-size:1.4rem; margin:0; }
+.site-sub{ margin:0; color: #cbd5e1; font-size:0.95rem }
+.btn.ghost{ background:transparent; color:#cbd5e1; border:1px solid rgba(255,255,255,0.06); padding:6px 10px; border-radius:8px; text-decoration:none }
+.app-root{ padding: 2rem 1rem; display:flex; justify-content:center; }
+.page-container{ width:100%; max-width:var(--max-width); }
+
+.app-header{ color: #fff; margin-bottom:1rem; }
+.header-inner{ display:flex; justify-content:space-between; align-items:center; gap:12px; padding-bottom:8px; }
+.site-title{ font-size:1.4rem; margin:0; }
+.site-sub{ margin:0; color: #cbd5e1; font-size:0.95rem }
+.btn.ghost{ background:transparent; color:#cbd5e1; border:1px solid rgba(255,255,255,0.06); padding:6px 10px; border-radius:8px; text-decoration:none }
+
+.app-footer{ margin-top:2rem; color:var(--muted); }
+.footer-inner{ display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.link{ color:inherit; text-decoration:underline }
+
+/* form and explanation */
+.w-full{ width:100%; }
+.max-w-4xl{ max-width:820px; }
+.bg-white{ background: linear-gradient(180deg,#071028,#071028); color: #e6eef8; }
+.p-6{ padding:1.5rem; }
+.rounded-2xl{ border-radius:1rem; }
+.shadow-lg{ box-shadow: 0 8px 30px rgba(2,6,23,0.6); }
+
+/* Make base text light on the dark background */
+body { background: linear-gradient(180deg,#071127 0%, #081228 100%); color: #e6eef8; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+
+/* Inputs, selects, textarea */
+textarea, input, select {
+	color: #e6eef8;
+	background: rgba(255,255,255,0.02);
+	border: 1px solid rgba(255,255,255,0.06);
+}
+textarea::placeholder, input::placeholder { color: rgba(230,238,248,0.5); }
+.p-6 label { color: #cbd5e1 }
+
+/* Explanation block should be readable */
+.w-full.max-w-4xl + .w-full.max-w-4xl, .w-full.max-w-4xl .markdown { color: #e6eef8 }
+
+/* Dedicated explanation card styling */
+.explanation-card{
+	background: linear-gradient(180deg,#071428,#071827);
+	color: #e6eef8;
+	border: 1px solid rgba(255,255,255,0.04);
+}
+.explanation-card h2{ color:#f1f9ff }
+.explanation-card p, .explanation-card li, .explanation-card pre { color: #e6eef8 }
+
+/* pending message style */
+.pending-msg{ background: linear-gradient(180deg,#071428,#071827); color:#e6eef8; border:1px solid rgba(255,255,255,0.03); }
+
+/* Make native select dropdown options readable on dark backgrounds */
+select {
+	-webkit-appearance: none;
+	appearance: none;
+	color: #e6eef8; /* closed select text */
+	background: rgba(255,255,255,0.02);
+}
+
+/* Some browsers allow styling option text color and background */
+option {
+	color: #e6eef8;
+	background: #071127; /* try to keep dropdown dark to match theme */
+}
+
+/* Improve focus visibility for keyboard users */
+select:focus, textarea:focus, input:focus {
+	outline: 2px solid rgba(96,165,250,0.35);
+	outline-offset: 2px;
+}
+
+.spinner{ width:20px; height:20px; animation:spin 1s linear infinite }
+.spinner .path{ stroke: #60a5fa; stroke-linecap:round; }
+@keyframes spin{ from{ transform:rotate(0)} to{ transform:rotate(360deg)} }
+
+/* small adjustments for mobile */
+@media (max-width:640px){ .header-inner{ flex-direction:column; align-items:flex-start } .footer-inner{ flex-direction:column; align-items:flex-start } }
+
